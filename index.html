@@ -1,0 +1,71 @@
+User
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="appContainer">
+        <button id="buscarBtn">Buscar Productos</button>
+        <input type="text" id="buscarInput" placeholder="Nombre del producto">
+        <button id="anadirBtn">Añadir Nuevo Producto</button>
+
+        <ul id="productoList"></ul>
+
+        <label for="nuevoNombre">Nombre:</label>
+        <input type="text" id="nuevoNombre" style="display: none;" placeholder="Nombre Producto Nuevo">
+
+        <label for="nuevoprecio">Precio:</label>
+        <input type="number" id="nuevoPrecio" style="display: none;" placeholder="Precio Producto Nuevo">
+
+        <label for="nuevostock">Sotck</label>
+        <input type="number" id="nuevoStock" style="display: none;" placeholder="Stock Producto Nuevo">
+
+        <button id="anadirProdcutoNuevoBtn" style="display: none;">Añadir Producto</button>
+
+        <div id="mensajeNoCoincidencias" style="color: red; display: none;">No se han encontrado coincidencias.
+            Inténtelo de nuevo.</div>
+
+        <label for="paisSelector">País:</label>
+        <select id="paisSelector">
+            <option value="espana">España</option>
+            <option value="francia">Francia</option>
+            <option value="portugal">Portugal</option>
+            <option value="italia">Italia</option>
+        </select>
+
+        <label for="codigoDescuento">Código de Descuento:</label>
+        <input type="text" id="codigoDescuento" placeholder="Introduce el código de descuento">
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" placeholder="Introduce la cantidad">
+
+        <button id="calcularPrecioBtn">Calcular Precio</button>
+        <div id="mensajeCantidadInvalida" style="color: red; display: none;">Por favor, introduce una cantidad válida
+            mayor o igual a 1.
+        </div>
+        <div id="mensajeDescuentoInvalido" style="color: red; display: none;">El código de descuento introducido no es
+            válido.
+        </div>
+        <div id="resultadoPrecios"></div>
+        <div id="mensajeStock" style="color: red; display: none;">¡No hay suficiente stock!</div>
+        <div id="mensajeErrorPrecio" style="color: red; display: none;">Por favor, introduce un precio válido (número
+            positivo con
+            dos decimales).</div>
+        <div id="mensajeErrorStock" style="color: red; display: none;">Por favor, introduce un stock válido (número
+            entero mayor a
+            0).</div>
+
+
+        <script src="main.js"></script>
+    </div>
+
+</body>
+
+</html>
